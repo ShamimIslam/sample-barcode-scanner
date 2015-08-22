@@ -1,12 +1,12 @@
 {
   "project": {
-    "projectSettingsVersion": "1.2",
+    "projectSettingsVersion": "2.0.0",
     "creationData": {
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
-      "src": "https://appcenter.html5tools-software.intel.com/api/v2.0/redirect/projectrenderers/release-2015-ww32/jsapp/templates-blank-cordova-project/sample.zip",
+      "src": "jsapp/sample-barcode-scanner/sample.zip",
          "projectGuid": "00000000-0000-0000-0000-000000000000",
-      "lastModifiedDate": 1438912721904,
-      "creationDate": 1438815586426
+      "lastModifiedDate": 1440121003861,
+      "creationDate": 1440120781726
     },
     "XDK-app-designer": "false",
     "sourceDirectory": "www",
@@ -18,36 +18,61 @@
     "cordovaPluginsDirectory": "plugins",
     "cordovaPlugins": [
       {
-        "id": "org.apache.cordova.device",
+        "id": "cordova-plugin-device",
          "version": "?",
-        "selectedState": "Included",
-        "data": {},
-        "paramvals": {},
-        "dependsOn": [],
-        "dependedBy": []
-      },
-      {
-        "id": "org.apache.cordova.splashscreen",
-         "version": "?",
-        "selectedState": "Included",
-        "data": {},
-        "paramvals": {},
-        "dependsOn": [],
-        "dependedBy": []
-      },
-      {
-        "id": "com.phonegap.plugins.barcodescanner.BarcodeScanner",
-         "version": "",
         "selectedState": "Included",
         "data": {},
         "paramvals": {},
         "dependsOn": [],
         "dependedBy": [],
-        "custom": "true",
-        "name": "barcode",
-        "origin": "https://github.com/phonegap/phonegap-plugin-barcodescanner.git",
+        "originType": "cordova.io",
+        "origin": "cordova-plugin-device",
+        "permissions": {},
+        "topLevel": true,
+        "gitref": "",
+        "name": "Device",
+        "description": "Cordova Device Plugin"
+      },
+      {
+        "id": "cordova-plugin-splashscreen",
+         "version": "?",
+        "selectedState": "Included",
+        "data": {},
+        "paramvals": {},
+        "dependsOn": [],
+        "dependedBy": [],
+        "originType": "cordova.io",
+        "origin": "cordova-plugin-splashscreen",
+        "permissions": {},
+        "topLevel": true,
+        "gitref": "",
+        "name": "Splashscreen",
+        "description": "Cordova Splashscreen Plugin"
+      },
+      {
+        "id": "phonegap-plugin-barcodescanner",
+        "name": "BarcodeScanner",
+         "version": "?",
         "originType": "repo",
-        "sourceLocation": ""
+        "origin": "https://github.com/phonegap/phonegap-plugin-barcodescanner.git",
+        "gitref": "",
+        "subdir": ".",
+        "paramvals": {},
+        "sourceLocation": "plugins/phonegap-plugin-barcodescanner",
+        "selectedState": "Included",
+        "dependsOn": [],
+        "topLevel": true,
+        "cordovaVersion": ">=3.0.0",
+        "permissions": {
+          "android:name": [
+            "android.permission.CAMERA",
+            "android.permission.FLASHLIGHT"
+          ]
+        },
+        "description": "You can use the BarcodeScanner plugin to scan different types of barcodes (using the device's camera) and get the metadata encoded in them for processing within your application.",
+        "data": {},
+        "dependedBy": [],
+        "custom": "true"
       }
     ],
     "buildConfigurations": {
@@ -61,13 +86,16 @@
           "android-installLocation": "auto"
         },
          "isActive_": true,
-        "appName_": "BarcodeScanner",
+        "appName_": "Barcode-Scanner",
         "appID_": "xdk.intel.demo.barcodescanner",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "http://debug-software.intel.com/*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -90,13 +118,16 @@
           "android-installLocation": "auto"
         },
          "isActive_": true,
-        "appName_": "BarcodeScanner",
+        "appName_": "Barcode-Scanner",
         "appID_": "xdk.intel.demo.barcodescanner",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "http://debug-software.intel.com/*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -118,13 +149,16 @@
           "ios-configuration": "adhoc"
         },
          "isActive_": true,
-        "appName_": "BarcodeScanner",
+        "appName_": "Barcode-Scanner",
         "appID_": "xdk.intel.demo.barcodescanner",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "http://debug-software.intel.com/*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -145,13 +179,16 @@
           "windows-publisher-id": ""
         },
          "isActive_": true,
-        "appName_": "BarcodeScanner",
+        "appName_": "Barcode-Scanner",
         "appID_": "xdk.intel.demo.barcodescanner",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "http://debug-software.intel.com/*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -169,13 +206,16 @@
         "name_": "WebApp",
         "preferences_": {},
          "isActive_": false,
-        "appName_": "BarcodeScanner",
+        "appName_": "Barcode-Scanner",
         "appID_": "not.yet.specified",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "http://debug-software.intel.com/*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -189,13 +229,16 @@
         "name_": "Chrome",
         "preferences_": {},
          "isActive_": false,
-        "appName_": "BarcodeScanner",
+        "appName_": "Barcode-Scanner",
         "appID_": "not.yet.specified",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "http://debug-software.intel.com/*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -209,13 +252,16 @@
         "name_": "Firefox",
         "preferences_": {},
          "isActive_": false,
-        "appName_": "BarcodeScanner",
+        "appName_": "Barcode-Scanner",
         "appID_": "not.yet.specified",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "http://debug-software.intel.com/*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -229,23 +275,51 @@
         "name_": "Facebook",
         "preferences_": {},
          "isActive_": false,
-        "appName_": "BarcodeScanner",
+        "appName_": "Barcode-Scanner",
         "appID_": "not.yet.specified",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "http://debug-software.intel.com/*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
          "appAuthor_": "Intel XDK",
         "appVersion_": "0.0.1"
+      },
+      "WP81": {
+        "platform_": "wp81",
+         "runtime_": "W3C on Facebook",
+        "name_": "WP81",
+        "preferences_": {},
+         "isActive_": false,
+        "appName_": "Barcode-Scanner",
+        "appID_": "not.yet.specified",
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "http://debug-software.intel.com/*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.0.1",
+        "appAuthor_": "Intel XDK",
+         "cordovaCLIVersion_": "?"
       }
     },
     "gameAssetDirectory": "asset",
     "gameMetadata": {},
-    "projectTags": []
+    "projectTags": [],
+    "testDirectory": "test"
   }
 }
