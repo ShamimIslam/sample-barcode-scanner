@@ -18,6 +18,7 @@
       "Barcode Scanner"
    ],
    "visible" : true,
+   "sample" : true,
    "screenshotUrl" : "",
    "description" : "This sample application demonstrates how to scan a barcode using the Phonegap* Barcode Scanner plugin to retrieve Universal Product Code (UPC) that can be used for product lookup in a UPC database.",
    "relName" : "4.0.0"
