@@ -33,7 +33,7 @@
                 "description": "Cordova StatusBar Plugin",
                 "data": {},
                 "dependedBy": []
-             },
+            },
             {
                 "id": "cordova-plugin-device",
                 "version": "?",
@@ -83,16 +83,16 @@
                 "data": {},
                 "cordovaVersion": "?",
                 "dependedBy": []
-            } 
+            }
         ],
         "buildConfigurations": {
-            "Android-Crosswalk": {
+            "Android": {
                 "platform_": "android",
                 "runtime_": "Crosswalk with Cordova 3.x",
                 "name_": "Android-Crosswalk",
                 "preferences_": {
                     "android-minSdkVersion": "14",
-                    "android-targetSdkVersion": "19",
+                    "android-targetSdkVersion": "23",
                     "android-installLocation": "auto"
                 },
                 "isActive_": true,
@@ -118,44 +118,12 @@
                 "appAuthor_": "Intel XDK",
                 "appVersionCode_": "1"
             },
-            "Android": {
-                "platform_": "android",
-                "runtime_": "Cordova 3.x",
-                "name_": "Android",
-                "preferences_": {
-                    "android-minSdkVersion": "14",
-                    "android-targetSdkVersion": "19",
-                    "android-installLocation": "auto"
-                },
-                "isActive_": true,
-                "appName_": "Barcode-Scanner",
-                "appID_": "xdk.intel.demo.barcodescanner",
-                "appAccess_": {
-                    "mode": "legacy",
-                    "network": [
-                        "http://debug-software.intel.com/*", 
-                        "https://debug-software.intel.com/*"
-                    ],
-                    "intents": [],
-                    "navigation": []
-                },
-                "icons_": [],
-                "splashes_": [],
-                "addlPermissions_": "",
-                "excludedLibraries_": "",
-                "cordovaCLIVersion_": "?",
-                "crosswalkVersion_": "?",
-                "appVersion_": "0.0.1",
-                "appDescription_": "Universal init code for Intel XDK and Cordova device ready detection.",
-                "appAuthor_": "Intel XDK",
-                "appVersionCode_": "1"
-            },
             "iOS": {
                 "platform_": "ios",
                 "runtime_": "Cordova 3.x",
                 "name_": "iOS",
                 "preferences_": {
-                    "ios-target": "6",
+                    "ios-target": "8.0",
                     "ios-configuration": "adhoc"
                 },
                 "isActive_": true,
@@ -164,7 +132,7 @@
                 "appAccess_": {
                     "mode": "legacy",
                     "network": [
-                        "http://debug-software.intel.com/*", 
+                        "http://debug-software.intel.com/*",
                         "https://debug-software.intel.com/*"
                     ],
                     "intents": [],
@@ -195,7 +163,7 @@
                 "appAccess_": {
                     "mode": "legacy",
                     "network": [
-                        "http://debug-software.intel.com/*", 
+                        "http://debug-software.intel.com/*",
                         "https://debug-software.intel.com/*"
                     ],
                     "intents": [],
@@ -222,7 +190,7 @@
                 "appAccess_": {
                     "mode": "legacy",
                     "network": [
-                        "http://debug-software.intel.com/*", 
+                        "http://debug-software.intel.com/*",
                         "https://debug-software.intel.com/*"
                     ],
                     "intents": [],
@@ -246,7 +214,7 @@
                 "appAccess_": {
                     "mode": "legacy",
                     "network": [
-                        "http://debug-software.intel.com/*", 
+                        "http://debug-software.intel.com/*",
                         "https://debug-software.intel.com/*"
                     ],
                     "intents": [],
@@ -270,7 +238,7 @@
                 "appAccess_": {
                     "mode": "legacy",
                     "network": [
-                        "http://debug-software.intel.com/*", 
+                        "http://debug-software.intel.com/*",
                         "https://debug-software.intel.com/*"
                     ],
                     "intents": [],
@@ -294,7 +262,7 @@
                 "appAccess_": {
                     "mode": "legacy",
                     "network": [
-                        "http://debug-software.intel.com/*", 
+                        "http://debug-software.intel.com/*",
                         "https://debug-software.intel.com/*"
                     ],
                     "intents": [],
@@ -318,7 +286,7 @@
                 "appAccess_": {
                     "mode": "legacy",
                     "network": [
-                        "http://debug-software.intel.com/*", 
+                        "http://debug-software.intel.com/*",
                         "https://debug-software.intel.com/*"
                     ],
                     "intents": [],
