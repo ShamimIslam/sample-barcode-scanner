@@ -99,7 +99,7 @@
                 "appName_": "Barcode-Scanner",
                 "appID_": "xdk.intel.demo.barcodescanner",
                 "appAccess_": {
-                    "mode": "legacy",
+                    "mode": "whitelist",
                     "network": [
                         "http://debug-software.intel.com/*",
                         "https://debug-software.intel.com/*"
