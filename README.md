@@ -1,24 +1,18 @@
 Barcode Scanner
-=====================================================================
+===============
 
 See [LICENSE.md](<LICENSE.md>) for license terms and conditions.
 
-## Project Details ##
+Project Details
+---------------
 
-This sample is part of the Intel® XDK. 
-Download the Intel® XDK at [http://software.intel.com/en-us/html5](http://software.intel.com/en-us/html5). This sample application demonstrates how to scan a barcode using the [Phonegap* Barcode Scanner plugin](https://github.com/phonegap/phonegap-plugin-barcodescanner) to retrieve Universal Product Code (UPC) that can be used for product lookup in any UPC database like [http://www.upcdatabase.com/](http://www.upcdatabase.com/). The plugin also supports other barcode types such as QR_CODE, DATA_MATRIX and AZTEC among many others.
+This sample is part of the [Intel® XDK](http://xdk.intel.com). It scans a
+barcode using the [Phonegap* Barcode Scanner plugin][1]. If you scan a UPC
+(Universal Product Code) symbol you can lookup the product code in a UPC
+database such as <http://www.upcdatabase.com>. The plugin reads a variety
+of barcodes, such as QR_CODE, DATA_MATRIX and AZTEC.
 
+[1]: https://github.com/phonegap/phonegap-plugin-barcodescanner
 
-To see the technical details of the sample, 
-please visit the **[included tutorial][]**. 
-[included tutorial]: docs/README.md
-
-
-
-## NOTE: ##
-
-Please ignore the `config.xml` file, the Cordova CLI `config.xml` format has
-been changing significantly, especially with the release of CLI 5.0, and this
-`config.xml` file has not been updated to reflect those changes. It will not
-work as written. It was originally created for use with PhoneGap CLI and has
-not been updated for use with the current PhoneGap CLI system, either.
+Technical details for this sample can be found in the
+[included tutorial](docs/README.md).

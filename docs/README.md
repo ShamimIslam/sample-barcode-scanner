@@ -1,51 +1,76 @@
-## Barcode Scanner App using Phonegap* Barcode Scanner plugin
+Barcode Scanner Tutorial
+========================
 
-_The source code for this sample can be found here: [https://github.com/gomobile/sample-barcode-scanner](https://github.com/gomobile/sample-barcode-scanner "https://github.com/gomobile/sample-barcode-scanner") or download the_ [Intel® XDK](https://software.intel.com/en-us/html5/tools) to check out all of the HTML5 samples and templates.
+The source code for this sample [can be found on GitHub][1] or as part of the
+[Intel® XDK][2].
 
-
-## Introduction
-
-Intel XDK® is a HTML5 hybrid application development environment that allow users to develop, debug, test on-device and build projects for various mobile platforms. Along with development features, this development environment provides various HTML5 templates and samples intended for running on various mobile devices and platforms. For more information on getting started, go to the [Intel XDK Overview](/en-us/xdk/docs/intel-xdk-overview).
-
-## Purpose
-
-By leveraging the [Apache Cordova* plug-ins](http://plugins.cordova.io/#/), you can develop compelling HTML5 hybrid apps for any platform and use case. [Apache Cordova](http://cordova.apache.org/) is a set of device APIs that allow a mobile app developer to access native device function such as the camera or accelerometer from JavaScript. Besides the standard APIs, various plug-ins are available in the [Apache Cordova Plug-ins Registry](http://plugins.cordova.io/#/) and located across the web on github. .
-
-With this sample app, you scan a barcode using the Phonegap* Barcode Scanner plugin to retrieve Universal Product Code (UPC) that can be used for product lookup in a UPC database. The plugin also supports other barcode types such as QR_CODE, DATA_MATRIX, AZTEC among many others.
-
-The app shows how to use the following plugin methods:
+[1]: https://github.com/gomobile/sample-barcode-scanner
+[2]: https://software.intel.com/en-us/html5/tools
 
 
-[Phonegap* Barcode Scanner plugin](https://github.com/phonegap/phonegap-plugin-barcodescanner)
+Introduction
+------------
 
-- cordova.plugins.barcodeScanner.scan(): Activates device camera to scan barcode and on successful product identification, passes an object with: 
-	- data (text representation of the barcode data)
-	- type (type of barcode detected) 
-	- cancelled (whether or not the user cancelled the scan) 
+By leveraging [Apache Cordova* plugins][3], you can develop hybrid mobile
+HTML5 apps for many platforms and use cases. Apache Cordova is a framework for
+adding device-specific APIs to hybrid mobile HTML5 apps. Using Cordova,
+developers can access device-specific hardware and software, such as the
+camera or contacts database, that you would normally not have access to from
+an HTML5 app running within the mobile browser. Besides the core Cordova APIs,
+many third-party Cordova plugins are available in the
+[Apache Cordova Plugin Registry][3] and on GitHub that extend the JavaScript
+APIs available for use with your app.
 
-            cordova.plugins.barcodeScanner.scan(
-                function (result) {
-                    console.log(fName, "Scanned result found!");
-                    alert("We got a barcode!\n" +
-                        "Result: " + result.text + "\n" +
-                        "Format: " + result.format + "\n" +
-                        "Cancelled: " + result.cancelled + "\n\n" +
-                        "You may use the " + result.format + " - '" + result.text + "' to look up your product in any UPC database like http://www.upcdatabase.com/");
-                },
-                function (error) {
-                    alert("Scanning failed: " + error);
-                }
-            );
+[3]: https://cordova.apache.org/plugins/#/
 
-Each button click is bound with methods that encapsulate the functionality of the plugin or API. These methods are defined in `app.js`.
+Purpose
+-------
+
+This simple app scans a barcode using the [Phonegap* Barcode Scanner plugin][4].
+The result could then be used for product lookup in a UPC database, for example.
+This plugin supports a wide range of barcode types, such as QR_CODE,
+DATA_MATRIX and AZTEC.
+
+[4]: https://github.com/phonegap/phonegap-plugin-barcodescanner
+
+This sample app uses the following API, which is provided by the barcode
+scanner Cordova plugin:
+
+* `cordova.plugins.barcodeScanner.scan()` activates the device camera to scan
+  for a barcode and, upon a successful scan, returns an object containing:
+
+  * data (text representation of the barcode data)
+  * type (type of barcode detected)
+  * canceled (whether or not the user canceled the scan)
+
+~~~~~~~~~~~~JavaScript
+    cordova.plugins.barcodeScanner.scan(
+        function (result) {
+            console.log(fName, "Scanned result found!");
+            alert("We got a barcode!\n" +
+                "Result: " + result.text + "\n" +
+                "Format: " + result.format + "\n" +
+                "Cancelled: " + result.cancelled + "\n\n" +
+                "You may use the " + result.format + " - '" + result.text + "' to look up your product in any UPC database like http://www.upcdatabase.com/");
+        },
+        function (error) {
+            alert("Scanning failed: " + error);
+        }
+    );
+~~~~~~~~~~~~
+
+Each UI button is bound to methods that encapsulate the functionality of
+the plugin or API. Those methods are defined in `app.js`.
 
 ![](screenshot.png)  
 
-## Testing
+Testing
+-------
 
-**Emulator:** Does not support third party plugins. So this app must be built and tested on device.
+**Simulator:** Does not support third party plugins. So this app must be built
+and tested on device.
 
-**App Preview:** Does not support third party plugins. So this app must be built and tested on device.
+**App Preview:** Does not support third party plugins. So this app must be built
+and tested on device.
 
 **Built app:** This sample application has been tested on iOS and Android devices.
-
